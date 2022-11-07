@@ -25,9 +25,12 @@ Route::post('api/cargo/load', 'CargosController@load');
 Route::put('api/cargo/update', 'CargosController@update');
 Route::delete('api/cargo/delete', 'CargosController@delete');
 
+//Employe's routes
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('api/employe/load', 'EmployeController@load');
+Route::put('api/employe/update', 'EmployeController@update');
 
 Auth::routes();
 
