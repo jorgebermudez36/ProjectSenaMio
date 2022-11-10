@@ -31,6 +31,7 @@ Auth::routes();
 
 Route::post('api/employe/load', 'EmployeController@load');
 Route::put('api/employe/update', 'EmployeController@update');
+Route::delete('api/employe/delete', 'EmployeController@delete');
 
 Auth::routes();
 

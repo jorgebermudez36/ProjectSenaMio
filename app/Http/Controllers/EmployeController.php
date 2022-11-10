@@ -12,7 +12,7 @@ class EmployeController extends Controller
     {
         $employe = new employe;
  
-        $employe->dniE = $request->id;
+        $employe->dniE = $request->dni;
         $employe->nameE = $request->nombre;
         $employe->surnameE = $request->apellido;
         $employe->addres = $request->direccion;
@@ -33,6 +33,12 @@ public function update(Request $request)
         $employe->phone = $request->telefono;
         $employe->cargo_id = $request->cargo;
         $employe->save();
+    }
+
+public function delete(Request $request)
+    {
+        $employe = employe::find($request->id);
+        $employe->delete();
     }
 
 }
