@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreignId('cargo_id')->constrained('cargos');
-            $table->foreignId('dni_id')->constrained('employes');
+            //$table->foreignId('cargo_id')->constrained('cargos');
+            //$table->foreignId('dni_id')->constrained('employes');
             
         });
     }
